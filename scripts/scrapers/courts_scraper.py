@@ -32,7 +32,7 @@ async def fetch() -> list[dict]:
 
         for query in QUERIES:
             try:
-                resp = client.search(query=query, search_depth="basic", max_results=5, days=3)
+                resp = client.search(query=query, search_depth="basic", max_results=5, days=1)
                 for r in resp.get("results", []):
                     url = r.get("url", "")
                     if not _is_courts_url(url):

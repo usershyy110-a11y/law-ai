@@ -15,7 +15,7 @@ SEARCH_URLS = [
 ]
 BASE_URL = "https://www.nevo.co.il"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; LawDigestBot/1.0; +info@law-digest.il)"}
-MAX_AGE_HOURS = 72  # Nevo updates less frequently
+MAX_AGE_HOURS = 24  # Nevo updates less frequently
 
 KEYWORDS = [
     "משפחה", "ירושה", "גירושין", "מזונות", "משמורת",
@@ -35,7 +35,7 @@ def _parse_date(text: str) -> Optional[datetime]:
 
 def _is_recent(dt: Optional[datetime]) -> bool:
     if not dt:
-        return True
+        return False  # exclude if date unknown
     cutoff = datetime.now(timezone.utc) - timedelta(hours=MAX_AGE_HOURS)
     return dt >= cutoff
 

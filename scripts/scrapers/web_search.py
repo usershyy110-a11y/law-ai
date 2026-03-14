@@ -46,7 +46,7 @@ async def _tavily_search(query: str) -> list[dict]:
             query=query,
             search_depth="basic",
             max_results=5,
-            days=2,  # last 48h
+            days=1,  # last 24h
         )
         items = []
         for r in resp.get("results", []):

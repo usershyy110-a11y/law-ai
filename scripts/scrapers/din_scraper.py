@@ -11,7 +11,7 @@ log = logging.getLogger("din")
 
 BASE_URL = "https://www.din.co.il/"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; LawDigestBot/1.0; +info@law-digest.il)"}
-MAX_AGE_HOURS = 48
+MAX_AGE_HOURS = 24
 
 KEYWORDS = [
     "משפחה", "ירושה", "גירושין", "מזונות", "משמורת",
@@ -33,7 +33,7 @@ def _parse_date(text: str) -> Optional[datetime]:
 
 def _is_recent(dt: Optional[datetime]) -> bool:
     if not dt:
-        return True
+        return False  # exclude if date unknown
     cutoff = datetime.now(timezone.utc) - timedelta(hours=MAX_AGE_HOURS)
     return dt >= cutoff
 

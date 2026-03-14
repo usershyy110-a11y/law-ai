@@ -5,7 +5,7 @@
     "פירוק שיתוף", "כתובה", "נישואין", "אימוץ",
     "בית משפט לענייני משפחה", "רשם לענייני ירושה"
   ],
-  "max_age_hours": 48,
+  "max_age_hours": 24,
   "max_items_per_source": 10,
   "max_items_for_gpt": 15,
   "azure_deployment": "gpt-5-chat",

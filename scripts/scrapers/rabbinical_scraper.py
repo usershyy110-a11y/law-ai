@@ -41,7 +41,7 @@ async def fetch() -> list[dict]:
                     query=query,
                     search_depth="basic",
                     max_results=5,
-                    days=3,
+                    days=1,
                 )
                 for r in resp.get("results", []):
                     url = r.get("url", "")
