@@ -1,0 +1,24 @@
+{
+  "keywords": [
+    "משפחה", "ירושה", "גירושין", "מזונות", "משמורת",
+    "עיזבון", "צוואה", "אפוטרופסות", "הסכם ממון",
+    "פירוק שיתוף", "כתובה", "נישואין", "אימוץ",
+    "בית משפט לענייני משפחה", "רשם לענייני ירושה"
+  ],
+  "max_age_hours": 48,
+  "max_items_per_source": 10,
+  "max_items_for_gpt": 15,
+  "azure_deployment": "gpt-5-chat",
+  "sources": {
+    "psakdin": "https://www.psakdin.co.il/",
+    "din": "https://www.din.co.il/",
+    "courts": "https://www.courts.gov.il/courts/mainmenu/press",
+    "nevo": "https://www.nevo.co.il/"
+  },
+  "web_search_queries": [
+    "דיני משפחה ירושה פסק דין חדש",
+    "גירושין מזונות משמורת ילדים פסיקה",
+    "חוק ירושה צוואה עדכון",
+    "בית משפט לענייני משפחה פסק דין"
+  ]
+}
